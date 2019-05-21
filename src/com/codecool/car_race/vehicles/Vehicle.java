@@ -2,7 +2,7 @@ package com.codecool.car_race.vehicles;
 
 import com.codecool.car_race.Race;
 
-public class Vehicle {
+public abstract class Vehicle {
     int distanceTraveled;
     String name;
 
