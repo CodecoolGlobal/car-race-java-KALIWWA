@@ -1,12 +1,15 @@
 package com.codecool.car_race;
 
 
+import com.codecool.car_race.vehicles.Car;
+
 public class Main {
 
     /**
      * Creates all the vehicles that will be part of this race.
      */
     private static void createVehicles(Race race) {
+        Car car = new Car(race);
     }
 
     /**

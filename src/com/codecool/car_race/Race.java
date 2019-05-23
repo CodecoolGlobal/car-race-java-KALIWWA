@@ -2,11 +2,11 @@ package com.codecool.car_race;
 
 public class Race {
 
-    public void simulateRace() {
-        System.out.println("Race");
+    void simulateRace() {
+        System.out.println("Race simulateRace");
     }
 
-    public void printRaceResults() {
-        System.out.println("Race Results");
+    void printRaceResults() {
+        System.out.println("Race printRaceResults");
     }
 }
