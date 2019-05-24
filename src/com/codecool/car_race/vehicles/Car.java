@@ -8,12 +8,12 @@ public class Car extends Vehicle {
 
     private int normalSpeed;
 
-    public Car(Race race) {
-        prepareForLap(race);
+    public Car() {
+        prepareForLap();
     }
 
     @Override
-    public void prepareForLap(Race race) {
+    public void prepareForLap() {
         Random random = new Random();
         int minSpeed = 80;
         int maxSpeed = 110;

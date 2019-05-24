@@ -9,7 +9,8 @@ public class Main {
      * Creates all the vehicles that will be part of this race.
      */
     private static void createVehicles(Race race) {
-        Car car = new Car(race);
+        Car car = new Car();
+//        race.addVehicles();
     }
 
     /**
