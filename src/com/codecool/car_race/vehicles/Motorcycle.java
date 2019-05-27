@@ -1,15 +1,13 @@
 package com.codecool.car_race.vehicles;
 
-import com.codecool.car_race.Race;
+public class Motorcycle extends Vehicle {
 
-public class Motocycle extends Vehicle {
-
-    public Motocycle() {
-
+    public Motorcycle() {
+        prepareForLap();
     }
 
     @Override
-    public void prepareForLap(Race race) {
+    public void prepareForLap() {
         assert true;
     }
 

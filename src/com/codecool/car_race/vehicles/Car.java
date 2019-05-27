@@ -1,7 +1,5 @@
 package com.codecool.car_race.vehicles;
 
-import com.codecool.car_race.Race;
-
 import java.util.Random;
 
 public class Car extends Vehicle {
@@ -9,6 +7,7 @@ public class Car extends Vehicle {
     private int normalSpeed;
 
     public Car() {
+
         prepareForLap();
     }
 
