@@ -26,7 +26,7 @@ public class Race {
     }
 
     public boolean isThereABrokenTruck() {
-        for (Vehicle vehicle: racingVehicles) {
+        for (Vehicle vehicle : racingVehicles) {
             if (vehicle instanceof Truck) {
                 if (((Truck) vehicle).isBroken()) {
                     return true;
@@ -39,7 +39,7 @@ public class Race {
     void simulateRace() {
         for (int i = 0; i < 50; i++) {
             weather.setRaining();
-            for (Vehicle vehicle: racingVehicles) {
+            for (Vehicle vehicle : racingVehicles) {
                 vehicle.prepareForLap(this);
                 vehicle.moveForAnHour();
             }
@@ -47,9 +47,8 @@ public class Race {
     }
 
 
-
     void printRaceResults() {
-        for (Vehicle vehicle: racingVehicles) {
+        for (Vehicle vehicle : racingVehicles) {
             System.out.println(vehicle.getName() + " Travelled: " + vehicle.getDistanceTraveled());
         }
     }
