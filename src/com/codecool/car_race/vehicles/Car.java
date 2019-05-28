@@ -1,35 +1,35 @@
 package com.codecool.car_race.vehicles;
 
-import java.util.Random;
+import com.codecool.car_race.Race;
+import com.codecool.car_race.Util;
 
 public class Car extends Vehicle {
 
-    private int normalSpeed;
 
-    public Car() {
-
-        prepareForLap();
+    public Car(String name) {
+        super(name);
     }
+
+
+
 
     @Override
-    public void prepareForLap() {
-        Random random = new Random();
-        int minSpeed = 80;
-        int maxSpeed = 110;
-        normalSpeed = random.nextInt((maxSpeed - minSpeed) + 1) + minSpeed;
-        setNormalSpeed(normalSpeed);
+    public void prepareForLap(Race race) {
+        if (race.isThereABrokenTruck()) {
+            int maxSpeed = 75;
+            speed = Util.getRandomNumber(maxSpeed);
+        } else {
+            int maxSpeed = 110;
+            int minSpeed = 80;
+            speed = Util.getRandomNumber(minSpeed, maxSpeed);
+
+        }
+
     }
 
-    @Override
-    public void moveForAnHour() {
-        assert true;
+    public int getDistanceTraveled() {
+        return distanceTraveled;
     }
 
-    private int getNormalSpeed() {
-        return normalSpeed;
-    }
 
-    private void setNormalSpeed(int normalSpeed) {
-        this.normalSpeed = normalSpeed;
-    }
 }

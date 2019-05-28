@@ -1,24 +1,56 @@
 package com.codecool.car_race;
 
+import com.codecool.car_race.vehicles.Truck;
+import com.codecool.car_race.vehicles.Vehicle;
+
 import java.util.ArrayList;
+import java.util.List;
 
 public class Race {
+    private List<Vehicle> racingVehicles;
+    private Weather weather;
 
-    private ArrayList<Object> racingVehicles = new ArrayList<>(30);
+    public Race() {
+        this.racingVehicles = new ArrayList<>();
+        this.weather = new Weather();
+    }
 
-    void addVehicles(ArrayList list) {
+    public boolean isRaining() {
+        return weather.isRaining();
+    }
 
-        racingVehicles.addAll(list);
+    void addVehicle(Vehicle vehicle) {
+
+        racingVehicles.add(vehicle);
 
     }
 
+    public boolean isThereABrokenTruck() {
+        for (Vehicle vehicle: racingVehicles) {
+            if (vehicle instanceof Truck) {
+                if (((Truck) vehicle).isBroken()) {
+                    return true;
+                }
+            }
+        }
+        return false;
+    }
+
     void simulateRace() {
-        System.out.println("Race simulateRace");
+        for (int i = 0; i < 50; i++) {
+            weather.setRaining();
+            for (Vehicle vehicle: racingVehicles) {
+                vehicle.prepareForLap(this);
+                vehicle.moveForAnHour();
+            }
+        }
     }
 
 
 
     void printRaceResults() {
-        System.out.println("Race printRaceResults");
+        for (Vehicle vehicle: racingVehicles) {
+            System.out.println(vehicle.getName() + " " + vehicle.getDistanceTraveled());
+        }
     }
 }

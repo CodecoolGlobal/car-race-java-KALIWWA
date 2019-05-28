@@ -1,21 +1,19 @@
 package com.codecool.car_race;
 
-import java.util.Random;
-
 public class Weather {
 
-    private Random random = new Random();
+    private boolean raining;
 
-    private int setRaining() {
-        return random.nextInt(10);
+    public Weather() {
+        this.raining = true;
+    }
+
+    public void setRaining() {
+        int raining = Util.getRandomNumber(10);
+        this.raining = raining < 3;
     }
 
     public boolean isRaining() {
-        int raining = setRaining();
-        if (0 < raining && raining < 3) {
-            return true;
-        } else {
-            return false;
-        }
+        return raining;
     }
 }
