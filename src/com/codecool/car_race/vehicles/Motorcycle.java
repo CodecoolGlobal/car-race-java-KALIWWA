@@ -7,15 +7,14 @@ public class Motorcycle extends Vehicle {
 
     private static int motorcycleNumber = 0;
 
-    public Motorcycle(String name) {
-        super(name);
+    public Motorcycle() {
         setName();
 
     }
 
     private void setName() {
         motorcycleNumber++;
-        name = name + motorcycleNumber;
+        name = "Motorcycle " + motorcycleNumber;
     }
 
     @Override

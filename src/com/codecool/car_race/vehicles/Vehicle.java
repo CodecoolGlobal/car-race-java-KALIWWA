@@ -3,13 +3,12 @@ package com.codecool.car_race.vehicles;
 import com.codecool.car_race.Race;
 
 public abstract class Vehicle {
-    protected int distanceTraveled;
-    protected String name;
-    protected int speed;
+    int distanceTraveled;
+    String name;
+    int speed;
 
-    public Vehicle(String name) {
+    Vehicle() {
         this.distanceTraveled = 0;
-        this.name = name;
         this.speed = 0;
     }
 

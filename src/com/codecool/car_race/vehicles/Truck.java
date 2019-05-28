@@ -8,7 +8,7 @@ public class Truck extends Vehicle {
     private int breakdownTurnsLeft;
 
     public Truck() {
-        super(String.valueOf(Util.getRandomNumber(1000)));
+        name = String.valueOf(Util.getRandomNumber(1000));
         breakdownTurnsLeft = 0;
     }
 
@@ -20,7 +20,7 @@ public class Truck extends Vehicle {
     @Override
     public void prepareForLap(Race race) {
         if (isBroken()) {
-            breakdownTurnsLeft --;
+            breakdownTurnsLeft--;
 
         } else {
             boolean isBreaking = Util.getRandomNumber(20) == 5;

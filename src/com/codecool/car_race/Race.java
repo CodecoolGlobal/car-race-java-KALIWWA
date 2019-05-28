@@ -50,7 +50,7 @@ public class Race {
 
     void printRaceResults() {
         for (Vehicle vehicle: racingVehicles) {
-            System.out.println(vehicle.getName() + " " + vehicle.getDistanceTraveled());
+            System.out.println(vehicle.getName() + " Travelled: " + vehicle.getDistanceTraveled());
         }
     }
 }

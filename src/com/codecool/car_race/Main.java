@@ -15,9 +15,9 @@ public class Main {
     private static void createVehicles(Race race) {
 
         for (int i = 0; i < 10; i++) {
-            race.addVehicle(new Car("Car" + i));
+            race.addVehicle(new Car());
             race.addVehicle(new Truck());
-            race.addVehicle(new Motorcycle("Motorcycle"));
+            race.addVehicle(new Motorcycle());
         }
 
 
