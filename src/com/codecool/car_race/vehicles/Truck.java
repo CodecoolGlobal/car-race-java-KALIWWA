@@ -21,7 +21,6 @@ public class Truck extends Vehicle {
     public void prepareForLap(Race race) {
         if (isBroken()) {
             breakdownTurnsLeft--;
-
         } else {
             boolean isBreaking = Util.getRandomNumber(20) == 5;
             if (isBreaking) {

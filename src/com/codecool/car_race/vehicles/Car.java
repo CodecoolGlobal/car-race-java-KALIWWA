@@ -11,14 +11,14 @@ public class Car extends Vehicle {
     }
 
     private void setName() {
-        String[] nameParts = new String[]{"Elysium", "Corsair", "Empire", "Olympian", "Virtue", "Fang", "Voyage", "Supremacy", "Evolution", "Empyrean"};
+        String[] nameParts = new String[]{"Elysium", "Corsair", "Empire", "Olympian", "Virtue",
+                                            "Fang", "Voyage", "Supremacy", "Evolution", "Empyrean"};
         int firstPartIndex = Util.getRandomNumber(10);
         int secondPartIndex = Util.getRandomNumber(10);
 
         if (firstPartIndex == secondPartIndex) {
             secondPartIndex = Util.getRandomNumber(10);
             name = nameParts[firstPartIndex] + " " + nameParts[secondPartIndex];
-
         } else {
             name = nameParts[firstPartIndex] + " " + nameParts[secondPartIndex];
         }
@@ -34,7 +34,6 @@ public class Car extends Vehicle {
             int maxSpeed = 110;
             int minSpeed = 80;
             speed = Util.getRandomNumber(minSpeed, maxSpeed);
-
         }
 
     }
@@ -42,6 +41,5 @@ public class Car extends Vehicle {
     public int getDistanceTraveled() {
         return distanceTraveled;
     }
-
 
 }

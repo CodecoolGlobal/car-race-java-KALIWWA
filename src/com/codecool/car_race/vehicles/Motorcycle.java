@@ -9,7 +9,6 @@ public class Motorcycle extends Vehicle {
 
     public Motorcycle() {
         setName();
-
     }
 
     private void setName() {

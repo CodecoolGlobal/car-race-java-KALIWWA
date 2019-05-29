@@ -1,5 +1,7 @@
 package com.codecool.car_race;
 
+import com.codecool.car_race.vehicles.Car;
+import com.codecool.car_race.vehicles.Motorcycle;
 import com.codecool.car_race.vehicles.Truck;
 import com.codecool.car_race.vehicles.Vehicle;
 
@@ -49,7 +51,15 @@ public class Race {
 
     void printRaceResults() {
         for (Vehicle vehicle : racingVehicles) {
-            System.out.println(vehicle.getName() + " Travelled: " + vehicle.getDistanceTraveled());
+            String type = "unknown type";
+            if (vehicle instanceof Car) {
+                type = "Car";
+            } else if (vehicle instanceof Truck) {
+                type = "Truck";
+            } else if (vehicle instanceof Motorcycle) {
+                type = "Motorcycle";
+            }
+            System.out.println(type + " -> " + vehicle.getName() + " Travelled: " + vehicle.getDistanceTraveled());
         }
     }
 }
