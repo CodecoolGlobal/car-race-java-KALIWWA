@@ -8,12 +8,12 @@ public class Weather {
         this.raining = true;
     }
 
-    public void setRaining() {
+    void setRaining() {
         int raining = Util.getRandomNumber(10);
         this.raining = raining < 3;
     }
 
-    public boolean isRaining() {
+    boolean isRaining() {
         return raining;
     }
 }

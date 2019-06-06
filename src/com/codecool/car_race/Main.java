@@ -5,8 +5,6 @@ import com.codecool.car_race.vehicles.Car;
 import com.codecool.car_race.vehicles.Motorcycle;
 import com.codecool.car_race.vehicles.Truck;
 
-import java.util.ArrayList;
-
 public class Main {
 
     /**
