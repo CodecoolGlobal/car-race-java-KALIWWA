@@ -10,7 +10,7 @@ public class Car extends Vehicle {
         setName();
     }
 
-    private void setName() {
+    public void setName() {
         String[] nameParts = new String[]{"Elysium", "Corsair", "Empire", "Olympian", "Virtue",
                                             "Fang", "Voyage", "Supremacy", "Evolution", "Empyrean"};
         int firstPartIndex = Util.getRandomNumber(10);

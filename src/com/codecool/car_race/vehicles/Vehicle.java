@@ -20,6 +20,8 @@ public abstract class Vehicle {
         return distanceTraveled;
     }
 
+    public abstract void setName();
+
     // setup the actual speed used for the current lap
     public abstract void prepareForLap(Race race);
 

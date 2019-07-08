@@ -8,10 +8,13 @@ public class Truck extends Vehicle {
     private int breakdownTurnsLeft;
 
     public Truck() {
-        name = String.valueOf(Util.getRandomNumber(1000));
+        setName();
         breakdownTurnsLeft = 0;
     }
 
+    public void setName() {
+        name = String.valueOf(Util.getRandomNumber(1000));
+    }
 
     public boolean isBroken() {
         return breakdownTurnsLeft > 0;

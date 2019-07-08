@@ -11,7 +11,7 @@ public class Motorcycle extends Vehicle {
         setName();
     }
 
-    private void setName() {
+    public void setName() {
         motorcycleNumber++;
         name = "Motorcycle " + motorcycleNumber;
     }
